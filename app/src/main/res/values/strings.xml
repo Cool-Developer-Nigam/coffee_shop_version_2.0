@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Coffee shop</string>
+    <string name="choose_your_nfavourite_coffee">Choose your \nfavourite Coffee</string>
+    <string name="search_anything">Search anything.....</string>
+    <string name="category">Category</string>
+    <string name="popular_coffees">Popular coffees</string>
+    <string name="see_all">see all</string>
+    <string name="explorer">Explorer</string>
+    <string name="cart">cart</string>
+    <string name="favourite">Favourite</string>
+    <string name="my_order">My order</string>
+    <string name="profile">Profile</string>
+    <string name="baadshah_coffee_shop">Baadshah\'s Coffee Shop</string>
+    <string name="money">$-</string>
+    <string name="title">title</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "826699881209",
+    "project_id": "project0143n",
+    "storage_bucket": "project0143n.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826699881209:android:a500b63c5c86eacfd7a028",
+        "android_client_info": {
+          "package_name": "com.nigdroid.coffeeshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAORKB4GBEGUP1XnzYG3MgoAHUe96qGrwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

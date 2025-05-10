@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="img_back" type="id" />
+    <item name="username_text" type="id" />
+    <item name="profile_picture" type="id" />
+    <item name="email_text" type="id" />
+    <item name="edit_profile_button" type="id" />
+    <item name="about_me_text" type="id" />
+    <item name="contact_info_text" type="id" />
+    <item name="achievements_placeholder" type="id" />
+    <item name="recent_activity_placeholder" type="id" />
+    <item name="settings_link" type="id" />
+    <item name="logout_button" type="id" />
+</resources>
