@@ -102,19 +102,26 @@ class DetailActivity : AppCompatActivity() {
                 }
             }
 
+            val prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+            val editor = prefs.edit()
+
+
+            // Restore background state if it was changed
+
+
+
+//          var imgFav:ImageView=findViewById(R.id.img_fav)
+
+
+
           var img_fav: ImageView = findViewById(R.id.img_fav)
-            favBtn.setOnClickListener {
-                managementFavourite.insertItem(item) // Add the current item to favorites
-                // The Toast message is shown inside ManagementFavourite.insertItem()
+            img_fav.setOnClickListener {
+                managementFavourite.insertItem(item)
 
-
-                val colorStateList = ColorStateList.valueOf(ContextCompat.getColor(this@DetailActivity, R.color.white))
-              
-
-                img_fav.imageTintList = colorStateList
-
+                img_fav.setImageResource(R.drawable.img_2)
 
             }
+
 
 
 

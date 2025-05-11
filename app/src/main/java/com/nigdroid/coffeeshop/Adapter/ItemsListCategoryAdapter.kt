@@ -15,8 +15,8 @@ class ItemsListCategoryAdapter(val items:MutableList<ItemsModel>)
     :RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
          companion object{
-             const val TYPE_ITEM1=0
-             const val TYPE_ITEM2=1
+             const val TYPE_ITEM1=1
+             const val TYPE_ITEM2=0
 
          }
     lateinit var context:Context

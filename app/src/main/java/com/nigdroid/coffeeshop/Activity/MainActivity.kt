@@ -33,9 +33,7 @@ class MainActivity : AppCompatActivity() {
         initBanner()
         initCatagory()
         initPopular()
-
         initBottomMenu()
-
 
     }
 
@@ -50,8 +48,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.exploreBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, MainActivity::class.java))
-
-
         }
 
         binding.cartBtn.setOnClickListener {

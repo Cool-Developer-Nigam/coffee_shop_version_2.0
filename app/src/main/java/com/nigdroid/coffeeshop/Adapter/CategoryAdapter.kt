@@ -31,7 +31,6 @@ class CategoryAdapter(val items:MutableList<CategoryModel>)
         viewType: Int
     ): CategoryAdapter.Viewholder {
 
-
         context=parent.context
         val binding=ViewholderCatagoryBinding.inflate(LayoutInflater.from(context),parent,false)
         return Viewholder(binding)
@@ -43,23 +42,6 @@ class CategoryAdapter(val items:MutableList<CategoryModel>)
       val item=items[position]
         holder.binding.titleCat.text=item.title
 
-//        holder.binding.root.setOnClickListener {
-//
-//            lastSelectedPosition=selectedPosition
-//            selectedPosition=position
-//            notifyItemChanged(lastSelectedPosition)
-//            notifyItemChanged(selectedPosition)
-//
-//            Handler(Looper.getMainLooper()).postDelayed({
-//                val intent=android.content.Intent(context, ItemsListActivity::class.java).apply {
-//                    putExtra("id",item.id.toString())
-//                    putExtra("title",item.title)
-//
-//                }
-//                ContextCompat.startActivity(context,intent,null)
-//            },500)
-//
-//        }
         holder.binding.root.setOnClickListener {
             val currentPosition = holder.getAdapterPosition()
             if (currentPosition != RecyclerView.NO_POSITION) { // Always check for NO_POSITION
