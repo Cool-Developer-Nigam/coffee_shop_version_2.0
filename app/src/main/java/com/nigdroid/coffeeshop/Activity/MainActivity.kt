@@ -15,6 +15,7 @@ import com.nigdroid.coffeeshop.Adapter.PopularAdapter
 import com.nigdroid.coffeeshop.R
 import com.nigdroid.coffeeshop.ViewModel.MainViewModel
 import com.nigdroid.coffeeshop.databinding.ActivityMainBinding
+import kotlin.jvm.java
 
 class MainActivity : AppCompatActivity() {
 
@@ -59,6 +60,12 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(Intent(this@MainActivity,FavouriteActivity::class.java))
 
+        }
+        binding.contactUs.setOnClickListener { 
+            
+            startActivity(Intent(this@MainActivity, About_us::class.java))
+            
+            
         }
 
     }

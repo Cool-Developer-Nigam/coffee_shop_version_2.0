@@ -1,5 +1,6 @@
 package com.nigdroid.coffeeshop.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,9 @@ class CartActivity : AppCompatActivity() {
     lateinit var managmentCart: ManagmentCart
     private var tax:Double=0.0
 
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,6 +32,14 @@ class CartActivity : AppCompatActivity() {
         calculateCart()
         setVariable()
         initCartList()
+
+
+       binding.proceedToCheckout.setOnClickListener {
+
+           intent= Intent(this,CheckoutActivity::class.java)
+           startActivity(intent.putExtra("total",calculateCart()))
+
+       }
 
     }
 
@@ -54,7 +66,7 @@ class CartActivity : AppCompatActivity() {
         }
     }
 
-    private fun calculateCart() {
+    private fun calculateCart() :Double {
         val percentTax:Double=0.02
         val delivery=15
         tax=Math.round((managmentCart.getTotalFee()*percentTax)*100)/100.0
@@ -68,6 +80,6 @@ class CartActivity : AppCompatActivity() {
             totalTxt.text="$$total"
         }
 
-
+        return total.toDouble()
     }
 }
