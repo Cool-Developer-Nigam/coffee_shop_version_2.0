@@ -118,7 +118,7 @@ class DetailActivity : AppCompatActivity() {
             img_fav.setOnClickListener {
                 managementFavourite.insertItem(item)
 
-                img_fav.setImageResource(R.drawable.img_2)
+                img_fav.setImageResource(R.drawable.img_8)
 
             }
 
