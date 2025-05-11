@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -42,22 +43,47 @@ class CategoryAdapter(val items:MutableList<CategoryModel>)
       val item=items[position]
         holder.binding.titleCat.text=item.title
 
+//        holder.binding.root.setOnClickListener {
+//
+//            lastSelectedPosition=selectedPosition
+//            selectedPosition=position
+//            notifyItemChanged(lastSelectedPosition)
+//            notifyItemChanged(selectedPosition)
+//
+//            Handler(Looper.getMainLooper()).postDelayed({
+//                val intent=android.content.Intent(context, ItemsListActivity::class.java).apply {
+//                    putExtra("id",item.id.toString())
+//                    putExtra("title",item.title)
+//
+//                }
+//                ContextCompat.startActivity(context,intent,null)
+//            },500)
+//
+//        }
         holder.binding.root.setOnClickListener {
+            val currentPosition = holder.getAdapterPosition()
+            if (currentPosition != RecyclerView.NO_POSITION) { // Always check for NO_POSITION
 
-            lastSelectedPosition=selectedPosition
-            selectedPosition=position
-            notifyItemChanged(lastSelectedPosition)
-            notifyItemChanged(selectedPosition)
+                lastSelectedPosition = selectedPosition
+                selectedPosition = currentPosition // Use the current position
+                notifyItemChanged(lastSelectedPosition)
+                notifyItemChanged(selectedPosition) // Use the current position
 
-            Handler(Looper.getMainLooper()).postDelayed({
-                val intent=android.content.Intent(context, ItemsListActivity::class.java).apply {
-                    putExtra("id",item.id.toString())
-                    putExtra("title",item.title)
-
-                }
-                ContextCompat.startActivity(context,intent,null)
-            },500)
-
+                Handler(Looper.getMainLooper()).postDelayed({
+                    val latestPosition = holder.getAdapterPosition() // Get the position again in the lambda
+                    if (latestPosition != RecyclerView.NO_POSITION && latestPosition < items.size) {
+                        val latestItem = items[latestPosition] // Get the correct item based on the latest position
+                        val intent = android.content.Intent(context, ItemsListActivity::class.java).apply {
+                            putExtra("id", latestItem.id.toString())
+                            putExtra("title", latestItem.title)
+                        }
+                        ContextCompat.startActivity(context, intent, null)
+                    } else {
+                        // Handle case where item was removed or position is invalid by the time the lambda runs
+                        Log.w("CategoryAdapter", "Item position invalid by the time postDelayed executed.")
+                    }
+                }, 200)
+            }
         }
         if(selectedPosition==position){
             holder.binding.titleCat.setBackgroundResource(R.drawable.dark_brown_background)

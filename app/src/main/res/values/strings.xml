@@ -13,4 +13,8 @@
     <string name="baadshah_coffee_shop">Baadshah\'s Coffee Shop</string>
     <string name="money">$-</string>
     <string name="title">title</string>
+    <string name="Additional_info"> This app serves as a practical example for learning how to build a simple mobile application with UI elements and data handling.\n  As a first year student setting up evrything for this app was undoubtedly difficult for me. It consists of over 7000 lines of code, so I appologize in advance for any inconvenience caused. \n This is a Coffee Shop Demo App designed to simulate a basic e-commerce experience focused on coffee products. Users can browse a selection of coffee items, likely presented in a list or grid. A key feature is the ability to mark items as favorites, which are then accessible in a dedicated favorites section. Tapping on a specific coffee item allows users to view its details, such as price, description, and potentially images. The app also incorporates a user profile where users can see their information and potentially customize it, including setting a profile picture. A login/logout system manages user sessions.
+
+
+    </string>
 </resources>
