@@ -42,6 +42,53 @@
             android:text="Order Details Here"
             android:textColor="#333333"
             android:textSize="16sp" />
+
+        <TextView
+            android:textColor="@color/DarkBrown"
+            android:id="@+id/textView7"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="To know more about delivery, you can contact us.\n   Click on the call icon to directly call us." />
+
+        <LinearLayout
+            android:id="@+id/call_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/img_3"
+                android:layout_margin="12dp"
+                app:shapeAppearanceOverlay="@style/circle_nigu"
+
+
+
+                />
+
+            <TextView
+                android:textColor="@color/DarkBrown"
+              android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     Call us"
+
+
+
+                />
+
+
+
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 

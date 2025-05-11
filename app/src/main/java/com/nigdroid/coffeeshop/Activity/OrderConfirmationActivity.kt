@@ -1,29 +1,13 @@
 package com.nigdroid.coffeeshop.Activity
-//
-//import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-//import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.nigdroid.coffeeshop.R
-//
-//class OrderConfirmationActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
-//        setContentView(R.layout.activity_order_confirmation)
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-//            insets
-//        }
-//    }
-//}
-//package com.example.coffeeshop
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.nigdroid.coffeeshop.R
 
 class OrderConfirmationActivity : AppCompatActivity() {
 
@@ -56,5 +40,19 @@ class OrderConfirmationActivity : AppCompatActivity() {
             Total:
             $totalAmount
         """.trimIndent()
+
+
+        var call_us : LinearLayout = findViewById(R.id.call_us)
+
+        call_us.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val idial = Intent(Intent.ACTION_DIAL)
+
+                idial.setData(Uri.parse("tel:+919861703761"))
+                startActivity(idial)
+            }
+        })
+
+
     }
 }
