@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         finishAffinity() // This will finish all activities and exit the app
+
+
     }
 
 
