@@ -38,85 +38,59 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
+            <LinearLayout
+                android:layout_margin="16dp"
+                android:id="@+id/backBtn"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/brown_full_corner_bg"
+                android:orientation="horizontal"
+                >
 
-            <!-- Developer Image -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/devImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="380dp"
-                    android:background="@drawable/circle_bg"
-                    android:clipToOutline="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/nigam_image"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5" />
-
-                <!-- Developer Name & Info -->
-
-                <LinearLayout
-                    android:id="@+id/backBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/brown_full_corner_bg"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.1">
-
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/back"
-                        app:tint="@color/white" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_marginBottom="3dp"
-                        android:text="Back:"
-                        android:textColor="#FFFFFF"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/back"
+                    app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/font_style"
-                    android:text="Baadshah"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.05"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.65"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Back:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
 
+            </LinearLayout>
+
+            <!-- Developer Image -->
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/devImage"
+                    android:layout_width="325dp"
+                    android:layout_height="325dp"
+
+                   app:shapeAppearanceOverlay="@style/circle_pic"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nigam_nigu"
                     />
 
+                <!-- Developer Name & Info -->
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
 
 
             <TextView

@@ -19,6 +19,11 @@
         <item name="cornerSize">50dp</item>
 
     </style>
+    <style name="circle_pic">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">160dp</item>
+
+    </style>
 
 
 </resources>
