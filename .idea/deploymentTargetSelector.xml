@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="Coffee_shop.app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-05-11T05:50:24.283335200Z">
+        <DropdownSelection timestamp="2025-05-11T14:14:24.292303700Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="PhysicalDevice" identifier="serial=WK85NRGMD69TE6ZP" />
