@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="18dp"
                 android:text="@string/category"
-                android:textColor="@color/black"
+                android:textColor="@color/DarkBrown"
 
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -258,7 +258,9 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@color/DarkBrown"
-            android:layout_gravity="bottom"  >
+            android:layout_gravity="bottom"
+
+           >
 
            <LinearLayout
                android:layout_width="match_parent"
@@ -286,12 +288,11 @@
                   <TextView
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:text="@string/explorer"
-                      android:textSize="15sp"
-                      android:gravity="center_horizontal"
                       android:layout_marginTop="2dp"
+                      android:gravity="center_horizontal"
+                      android:text="@string/explorer"
                       android:textColor="@color/white"
-                      />
+                      android:textSize="15sp" />
 
 
 

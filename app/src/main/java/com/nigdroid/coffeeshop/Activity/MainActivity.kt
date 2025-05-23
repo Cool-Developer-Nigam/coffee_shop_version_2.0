@@ -6,7 +6,6 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.text.color
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -41,12 +40,10 @@ class MainActivity : AppCompatActivity() {
         super.onBackPressed()
         finishAffinity() // This will finish all activities and exit the app
 
-
     }
 
 
     private fun initBottomMenu() {
-
 
         binding.exploreBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, MainActivity::class.java))
@@ -70,8 +67,8 @@ class MainActivity : AppCompatActivity() {
         binding.contactUs.setOnClickListener { 
             
             startActivity(Intent(this@MainActivity, About_us::class.java))
-            
-            
+
+
         }
 
     }
